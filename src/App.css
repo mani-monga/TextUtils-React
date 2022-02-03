@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.blank{
+  color: red;
+}
+
+
+.herobtn{
+  width: 5px;
+  -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    
+}
+
+.herobtn:hover{
+  width: 50px;
+}
+.herobtn:hover::after{
+  content: white;
+  color: white;
+}
