@@ -4,17 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function Navbar(props) {
   return (
-    <nav className={`navbar navbar-expand-lg sticky-top bg-{
-      if(${props.theme} === 'null'){
-        ${props.mode}
-      }
-      else{ ${props.theme}}
-        } navbar-{
-          if(${props.theme} === 'null'){
-            ${props.mode}
-          }
-          else{ ${props.theme}}
-            }`}>
+    <nav className={`navbar navbar-expand-lg sticky-top bg-${props.mode} navbar-${props.mode}`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           {props.title}
@@ -79,11 +69,11 @@ export default function Navbar(props) {
             </li>
           </ul>
           <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button"  onClick={props.themechange} theme={'primary'} class="btn btn-primary py-3 herobtn"></button>
-                <button type="button"  onClick={props.themechange} class="btn btn-success py-3 herobtn"></button>
-                <button type="button" onClick={props.themechange} class="btn btn-warning py-3 herobtn"></button>
-                <button type="button"  onClick={props.themechange} class="btn btn-info py-3 herobtn"></button>
-                <button type="button"  onClick={props.themechange} class="btn btn-danger py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('primary')}} class="btn btn-primary py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('success')}} class="btn btn-success py-3 herobtn"></button>
+                <button type="button" onClick={()=>{props.togglemode('warning')}} class="btn btn-warning py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('info')}} class="btn btn-info py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('danger')}} class="btn btn-danger py-3 herobtn"></button>
                 
           </div>
           <ul className="list-inline mb-0 ">
@@ -103,7 +93,7 @@ export default function Navbar(props) {
               Search
             </button> */}
             <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
-              <input className="form-check-input" type="checkbox" role="switch" onClick={props.togglemode} id="flexSwitchCheckDefault"/>
+              <input className="form-check-input" type="checkbox" role="switch"onClick={()=>{props.togglemode('null')}} id="flexSwitchCheckDefault"/>
                 <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
             </div>
           </form>

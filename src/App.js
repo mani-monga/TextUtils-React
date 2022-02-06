@@ -14,7 +14,6 @@ import Alert from './components/Alert';
 function App() {
   const [mode, setmode] = useState('light');
   const [alert, setalert] = useState(null);
-  const [theme, settheme] = useState(null);
 
   const showalert = (message,type) => {
       setalert({
@@ -26,9 +25,20 @@ function App() {
       }, 2000);
   }
 
+  const removebdyclsses = () =>{
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-info');
+  }
 
-  const togglemode = () => {
-    if(mode === 'light'){
+  const togglemode = (cls) => {
+    
+    removebdyclsses();
+    if(cls === 'null'){if(mode === 'light'){
       setmode('dark');
       document.body.style.backgroundColor = '#313436'
       showalert("Dark Mode Has Been Enabled","success");
@@ -36,13 +46,16 @@ function App() {
     else{
       setmode('light')
       document.body.style.backgroundColor = 'white'
-      showalert("Light Mode Has Been Enabled","success");
+    }}
+    else{
+      document.body.classList.add('bg-' + cls)
+      showalert( cls +" theme Been Enabled",cls);
     }
   }
   return (
     <> 
     {/* <Router> */}
-    <Navbar title = "Text Utils" aboutText = "About" mode={mode} togglemode={togglemode} theme = {theme}/>
+    <Navbar title = "Text Utils" aboutText = "About" mode={mode} togglemode={togglemode}/>
     {/* <Switch> */}
           {/* <Route exact path="/about"> */}
           {/* <About/> */}
