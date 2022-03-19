@@ -23,15 +23,15 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item px-2">
-              <a className="nav-a active" aria-current="page" href="#">
+              <a className="nav-a active" aria-current="page" href="/">
                 Home
               </a>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-a" href="/">
+            <li className="nav-item">
+              <a className="nav-a" href="/about">
                 {props.aboutText}
               </a>
-            </li> */}
+            </li>
             <li className="nav-item dropdown px-2">
               <a
                 className="nav-a dropdown-toggle "
@@ -68,12 +68,12 @@ export default function Navbar(props) {
               </ul>
             </li>
           </ul>
-          <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button"  onClick={()=>{props.togglemode('primary')}} class="btn btn-primary py-3 herobtn"></button>
-                <button type="button"  onClick={()=>{props.togglemode('success')}} class="btn btn-success py-3 herobtn"></button>
-                <button type="button" onClick={()=>{props.togglemode('warning')}} class="btn btn-warning py-3 herobtn"></button>
-                <button type="button"  onClick={()=>{props.togglemode('info')}} class="btn btn-info py-3 herobtn"></button>
-                <button type="button"  onClick={()=>{props.togglemode('danger')}} class="btn btn-danger py-3 herobtn"></button>
+          <div className="btn-group me-2" role="group" aria-label="First group">
+                <button type="button"  onClick={()=>{props.togglemode('primary')}} className="btn btn-primary py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('success')}} className="btn btn-success py-3 herobtn"></button>
+                <button type="button" onClick={()=>{props.togglemode('warning')}} className="btn btn-warning py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('info')}} className="btn btn-info py-3 herobtn"></button>
+                <button type="button"  onClick={()=>{props.togglemode('danger')}} className="btn btn-danger py-3 herobtn"></button>
                 
           </div>
           <ul className="list-inline mb-0 ">

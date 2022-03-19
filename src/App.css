@@ -48,7 +48,20 @@
     transition: width 0.5s;
     
 }
-
+.nav-item a{
+  text-decoration: none;
+  margin: 0 10px;  
+}
+.nav-item a:hover{
+  color: grey;
+}
+.accordion-item{
+  text-align: center;
+}
+.accordion-body svg{
+      margin: 0 80px;
+      font-size: 3em;
+}
 .herobtn:hover{
   width: 50px;
 }

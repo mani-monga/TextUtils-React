@@ -50,10 +50,6 @@ export default function Form(props) {
   return (
     <><div className={`container border border-2 border-primary bg-{props.mode} text-${props.mode === 'light'?'dark':'light'} my-3 p-2`}>
       <div><h1>{props.heading}</h1>
-          {/* <div className="mb-3">
-            <label htmlFor="Mymail" className="form-label">Email address</label>
-            <input type="email" className="form-control" id="Mymail" placeholder="name@example.com" />
-          </div> */}
 
         <div className="mb-3">
           {/* <label htmlFor="myBox" className="form-label">Your Query</label> */}
