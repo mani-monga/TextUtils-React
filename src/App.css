@@ -55,6 +55,10 @@
 .nav-item a:hover{
   color: grey;
 }
+.dropdown-menu a:hover{
+  background-color: transparent;
+  color: blue;
+}
 .accordion-item{
   text-align: center;
 }
