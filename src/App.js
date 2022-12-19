@@ -7,8 +7,7 @@ import About from './components/About';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -46,6 +45,7 @@ function App() {
     else{
       setmode('light')
       document.body.style.backgroundColor = 'white'
+      showalert("Light Mode Has Been Enabled","success");
     }}
     else{
       document.body.classList.add('bg-' + cls)
@@ -58,9 +58,8 @@ function App() {
     <Navbar title = "Text Utils" aboutText = "About" mode={mode} togglemode={togglemode}/>
     <Switch>
           <Route exact path="/"><TextForm showalert ={showalert} heading = "Your Text" mode={mode} togglemode={togglemode}/></Route>
-          <Route exact path="/about"><About/></Route>
+          <Route path="/about"><About/></Route>
       </Switch>
-    
     <Alert alert = {alert}/>
     </Router>
     </>

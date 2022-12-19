@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 export default function Form(props) {
   const handleupcase = () => {
     // console.log("UpperCase was Clicked");
@@ -52,7 +50,6 @@ export default function Form(props) {
       <div><h1>{props.heading}</h1>
 
         <div className="mb-3">
-          {/* <label htmlFor="myBox" className="form-label">Your Query</label> */}
           <textarea className="form-control border border-2 border-dark" value={text} onChange={HandleOnChange} id="mybox" rows="6"></textarea>
         </div>
           <button className="btn btn-primary mx-3" onClick={handleupcase} >UpperCase</button>
