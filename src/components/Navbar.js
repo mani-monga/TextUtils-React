@@ -61,7 +61,7 @@ export default function Navbar(props) {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item"href="mailto:mni.monga02@gmail.com?subject=Me&body=Hello!">
+                  <a className="dropdown-item" href="mailto:mni.monga02@gmail.com?subject=Me&body=Hello!">
                     Send Enquiry
                   </a>
                 </li>
@@ -69,20 +69,20 @@ export default function Navbar(props) {
             </li>
           </ul>
           <div className="btn-group me-2" role="group" aria-label="First group">
-                <button type="button"  onClick={()=>{props.togglemode('primary')}} className="btn btn-primary py-3 herobtn"></button>
-                <button type="button"  onClick={()=>{props.togglemode('success')}} className="btn btn-success py-3 herobtn"></button>
-                <button type="button" onClick={()=>{props.togglemode('warning')}} className="btn btn-warning py-3 herobtn"></button>
-                <button type="button"  onClick={()=>{props.togglemode('info')}} className="btn btn-info py-3 herobtn"></button>
-                <button type="button"  onClick={()=>{props.togglemode('danger')}} className="btn btn-danger py-3 herobtn"></button>
-                
+            <button type="button" onClick={() => { props.togglemode('primary') }} className="btn btn-primary py-3 herobtn"></button>
+            <button type="button" onClick={() => { props.togglemode('success') }} className="btn btn-success py-3 herobtn"></button>
+            <button type="button" onClick={() => { props.togglemode('warning') }} className="btn btn-warning py-3 herobtn"></button>
+            <button type="button" onClick={() => { props.togglemode('info') }} className="btn btn-info py-3 herobtn"></button>
+            <button type="button" onClick={() => { props.togglemode('danger') }} className="btn btn-danger py-3 herobtn"></button>
+
           </div>
           <ul className="list-inline mb-0 ">
-            <li className="list-inline-item px-2 h3 "><a href="/"><i className= {`fa fa-github text-${props.mode === 'light'?'dark':'light'}`}></i></a></li>
+            <li className="list-inline-item px-2 h3 "><a href="/"><i className={`fa fa-github text-${props.mode === 'light' ? 'dark' : 'light'}`}></i></a></li>
             <li className="list-inline-item px-2 h3 "><a href="/"><i className="fa fa-linkedin text-info"></i></a></li>
             <li className="list-inline-item px-2 mr-3 h3 " ><a href="/"><i className="fa fa-twitter text-primary"></i></a></li>
           </ul>
           <form className="d-flex px-3">
-           
+
             {/* <input
               className="form-control me-2"
               type="search"
@@ -92,9 +92,9 @@ export default function Navbar(props) {
             <button className="btn btn-primary text-white" type="submit">
               Search
             </button> */}
-            <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
-              <input className="form-check-input" type="checkbox" role="switch"onClick={()=>{props.togglemode('null')}} id="flexSwitchCheckDefault"/>
-                <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+            <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+              <input className="form-check-input" type="checkbox" role="switch" onClick={() => { props.togglemode('null') }} id="flexSwitchCheckDefault" />
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
             </div>
           </form>
         </div>
